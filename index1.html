@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iskustva s Erasmusa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #555;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        textarea {
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <h1>Unos Prijašnjih Iskustava Studenata s Erasmusa</h1>
+    <form action="submit_experience.php" method="post">
+        <label for="ime">Ime:</label>
+        <input type="text" id="ime" name="ime" required><br><br>
+
+        <label for="prezime">Prezime:</label>
+        <input type="text" id="prezime" name="prezime" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="fakultet">Fakultet:</label>
+        <input type="text" id="fakultet" name="fakultet" required><br><br>
+
+        <label for="zemlja">Zemlja Erasmus Programa:</label>
+        <input type="text" id="zemlja" name="zemlja" required><br><br>
+
+        <label for="grad">Grad:</label>
+        <input type="text" id="grad" name="grad" required><br><br>
+
+        <label for="institucija">Institucija:</label>
+        <input type="text" id="institucija" name="institucija" required><br><br>
+
+        <label for="trajanje">Trajanje Boravka:</label>
+        <input type="text" id="trajanje" name="trajanje" required><br><br>
+
+        <label for="ocjena">Ocjena Iskustva (1-10):</label>
+        <input type="number" id="ocjena" name="ocjena" min="1" max="10" required><br><br>
+
+        <label for="komentari">Komentari:</label><br>
+        <textarea id="komentari" name="komentari" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Pošalji">
+    </form>
+</body>
+</html>
