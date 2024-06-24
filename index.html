@@ -1,17 +1,48 @@
 <!DOCTYPE html>
-<html lang="hr">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat Bot</title>
-    <link rel="stylesheet" href="styles.css">
+  <style>
+    .arrow {
+      cursor: pointer;
+      font-size: 40px;
+      user-select: none;
+    }
+  </style>
 </head>
 <body>
-    <div class="chat-container">
-        <div class="chat-box" id="chat-box"></div>
-        <input type="text" id="user-input" placeholder="Upiši poruku..." />
-        <button onclick="sendMessage()">Pošalji</button>
-    </div>
-    <script src="script.js"></script>
+
+<img id="myImage" src="1.png" width="300" height="200">
+
+<div>
+  <span class="arrow" onclick="prevImage()">&#8592;</span>
+  <span class="arrow" onclick="nextImage()">&#8594;</span>
+</div>
+
+<script>
+var images = ["1.png", "2.png", "3.png"];
+var currentIndex = 0;
+
+function showImage(index) {
+  var image = document.getElementById('myImage');
+  image.src = images[index];
+}
+
+function prevImage() {
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = images.length - 1;
+  }
+  showImage(currentIndex);
+}
+
+function nextImage() {
+  currentIndex++;
+  if (currentIndex >= images.length) {
+    currentIndex = 0;
+  }
+  showImage(currentIndex);
+}
+</script>
+
 </body>
 </html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-toggle {
+      background-color: #f9f9f9;
+      color: black;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      width: 200px;
+      text-align: left;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-menu a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-item {
+      position: relative;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      left: 200px;
+      top: 0;
+      background-color: #f9f9f9;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+
+    .dropdown-item:hover .submenu {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<div class="dropdown">
+  <button class="dropdown-toggle">Select a category</button>
+  <div class="dropdown-menu">
+    <a href="#">Upisi</a>
+    <div class="dropdown-item">
+      <a href="#">Upisi na preddiplomski studij</a>
+      <div class="submenu">
+        <a href="rač">Računalstvo</a>
+        <a href="info">Informatika</a>
+        <a href="storj">Strojarstvo</a>
+      </div>
+    </div>
+    <a href="#">Informacije o studiju</a>
+    <a href="#">Virtualna šetnja TVZ-a</a>
+    <a href="#">Moj.tvz</a>
+  </div>
+</div>
+
+</body>
+</html>
