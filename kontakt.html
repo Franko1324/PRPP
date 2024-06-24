@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktirajte nas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+        .contact-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        .contact-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333333;
+            text-align: center;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666666;
+        }
+        .contact-form input, .contact-form textarea, .contact-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+        }
+        .contact-form input[type="file"] {
+            padding: 3px;
+        }
+        .contact-form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .contact-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .message {
+            text-align: center;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-form">
+        <h2>Kontaktirajte nas</h2>
+        <form action="send_email.php" method="post" enctype="multipart/form-data">
+            <label for="name">Ime:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Telefon:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="subject">Predmet:</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <label for="department">Odjel/Kategorija:</label>
+            <select id="department" name="department" required>
+                <option value="prijave">Prijave</option>
+                <option value="studenti">Studenti</option>
+                <option value="profesori">Profesori</option>
+                <option value="administracija">Administracija</option>
+            </select>
+            
+            <label for="message">Poruka:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <label for="attachment">Priložite datoteku (opcionalno):</label>
+            <input type="file" id="attachment" name="attachment">
+            
+            <input type="submit" value="Pošalji">
+        </form>
+        <div class="message">
+            <!-- Ovdje će se prikazati poruka o uspjehu ili grešci -->
+        </div>
+    </div>
+</body>
+</html>
